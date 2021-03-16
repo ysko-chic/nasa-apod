@@ -4,7 +4,7 @@
 $ yarn add axios classnames sass-loader node-sass include-media open-color better-react-spinkit react-icons moment
 axios: Promise 기반 웹 요청 클라이언트
 classnames: CSS Module 과 조건부 className 을 설정 하는 것을 도와주는 라이브러리
-sass-loader, node-sass: 프로젝트에서 Sass 를 사용하기 위하여 필요한 도구
+sass-loader, node-sass: 프로젝트에서 Sass 를 사용하기 위하여 필요한 도구 --> sass-loader는 11버전으로 설치되는데 현재 리액트와 호환이 안되므로 sass-loader@10 으로 설치한다.
 include-media, open-color: Sass 라이브러리 (반응형 디자인, 색상 팔레트)
 better-react-spinkit: 로딩 시 보여줄 컴포넌트
 react-icons: SVG 형태의 리액트 컴포넌트 모음 라이브러리
