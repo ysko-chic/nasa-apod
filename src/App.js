@@ -12,7 +12,8 @@ class App extends Component {
     maxDate: null,
     date: null,
     url: null,
-    mediaType: null
+    mediaType: null,
+    title: ''
   }
 
   getAPOD = async (date) => {
@@ -24,7 +25,7 @@ class App extends Component {
 
     try {
       const response = await api.getAPOD(date);
-      const {date: retrievedDate, url, media_type: mediaType} = response.data; // 비구조화 할당 + 새로운 이름
+      const {date: retrievedDate, url, media_type: mediaType, title} = response.data; // 비구조화 할당 + 새로운 이름
 
       if (!this.state.maxDate) {
         this.setState({
@@ -35,7 +36,8 @@ class App extends Component {
       this.setState({
         date:retrievedDate,
         mediaType,
-        url
+        url,
+        title
       })
     } catch (e) {
       console.log(e);
@@ -66,12 +68,12 @@ class App extends Component {
   }
 
   render() {
-    const {url, mediaType, loading} = this.state;
+    const {url, mediaType, loading, title} = this.state;
     const {handlePrev, handleNext} = this;
 
     return(
       <ViewerTemplate 
-        spaceNavigator={<SpaceNavigator onPrev={handlePrev} onNext={handleNext}/>}
+        spaceNavigator={<SpaceNavigator onPrev={handlePrev} onNext={handleNext} title={title}/>}
         viewer={(
           <Viewer
             url={url}

@@ -6,6 +6,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    // img 와 iframe 은 이미 있는 태그를 변형 시키는 것이기 때문에 Component 안에서 따로 className에 넣어주지 않아도 된다.
     img {
         display: block;
         width: auto;

@@ -1,4 +1,5 @@
 # nasa-apod
+###### git에서 받아온 후 npm install
 
 ###### 필요 모듈 설치
 $ yarn add axios classnames sass-loader node-sass include-media open-color better-react-spinkit react-icons moment

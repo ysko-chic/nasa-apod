@@ -7,10 +7,12 @@ import {MdChevronRight} from 'react-icons/md';
 const cx = classNames.bind(styles);
 
 const SpaceNavigator = (props) => {
-    const {onPrev, onNext} = props;
+    const {onPrev, onNext, title} = props;
 
     return(
         <div className={cx('space-navigator')}>
+            <div className={cx('space-title')}>{title}</div>
+
             <div className={cx('left', 'end')}>
                 <div className={cx('circle')} onClick={onPrev}>
                     <MdChevronLeft />

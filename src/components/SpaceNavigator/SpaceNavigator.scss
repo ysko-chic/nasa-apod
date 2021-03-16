@@ -1,6 +1,12 @@
 @import 'utils';
 
 .space-navigator {
+    .space-title {
+        display: flex;
+        position: relative;
+        justify-content: center;
+        color: white;
+    }
     .end {
         position: absolute;
         top: 0;

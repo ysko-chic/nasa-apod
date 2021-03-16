@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './Viewer.scss';
 import classNames from 'classnames/bind';
-import {ChasingDots} from 'better-react-spinkit';
+import {Wave} from 'better-react-spinkit';
 
 const cx = classNames.bind(styles);
 
@@ -10,7 +10,7 @@ const Viewer = (props) => {
 
     if (loading) {
         return <div className={cx('viewer')}>
-            <ChasingDots color="white" size={60} />
+            <Wave color="white" size={60} />
         </div>
     }
 
